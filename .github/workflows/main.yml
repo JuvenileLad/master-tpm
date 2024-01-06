@@ -58,8 +58,7 @@ jobs:
        - name: cloning repo and install
          continue-on-error: true
          run: |
-            apt -qq update && apt -qq install -y --no-install-recommends git 
-            #git clone https://${{ secrets.TOKEN }}@github.com/Bainshedone/tpm-test test && cd test && pip3 install -r requirements.txt && git clone https://${{ secrets.TOKEN }}@github.com/Bainshedone/cookie cookies 
+            apt -qq update && apt -qq install -y --no-install-recommends git  
             git clone https://${{ secrets.TOKEN }}@github.com/JuvenileLad/tpm-test-master test && cd test && pip3 install -r requirements.txt
        - name: Running
          env:
